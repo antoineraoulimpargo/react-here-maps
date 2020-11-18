@@ -23,21 +23,21 @@ describe("<HEREMap />", () => {
 
     it("should return an HTMLLinkElement as a property of a" +
       " LinkState object, with the correct properties set.", () => {
-      const linkState = getLink("//js.api.here.com/v3/3.0/mapsjs-ui.css", "HERE Maps UI");
-      const {link} = linkState;
+        const linkState = getLink("//js.api.here.com/v3/3.0/mapsjs-ui.css", "HERE Maps UI");
+        const { link } = linkState;
 
-      // check that the href property is set to the desired URL
-      chai.expect(link).to.have.property("href");
-      chai.expect(link).to.have.property("href", "http://js.api.here.com/v3/3.0/mapsjs-ui.css");
+        // check that the href property is set to the desired URL
+        chai.expect(link).to.have.property("href");
+        chai.expect(link).to.have.property("href", "http://js.api.here.com/v3/3.0/mapsjs-ui.css");
 
-      // check that rel is set to "stylesheet"
-      chai.expect(link).to.have.property("rel");
-      chai.expect(link).to.have.property("rel", "stylesheet");
+        // check that rel is set to "stylesheet"
+        chai.expect(link).to.have.property("rel");
+        chai.expect(link).to.have.property("rel", "stylesheet");
 
-      // check that type is set to "text/css"
-      chai.expect(link).to.have.property("type");
-      chai.expect(link).to.have.property("type", "text/css");
-    });
+        // check that type is set to "text/css"
+        chai.expect(link).to.have.property("type");
+        chai.expect(link).to.have.property("type", "text/css");
+      });
 
     it("should have a link element appended to the body of the document", () => {
       const stylesheetUrl = "//js.api.here.com/v3/3.0/mapsjs-ui.css";
